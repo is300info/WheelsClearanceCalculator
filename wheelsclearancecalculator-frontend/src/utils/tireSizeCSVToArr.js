@@ -21,6 +21,6 @@ fs.createReadStream("./src/utils/tireSizeCSV.csv")
   })
   .on('end', () => {
     console.log(tempWholeArr)
-    fs.writeFile("./src/utils/write.js", tempWholeArr)
+    fs.writeFileSync("./src/utils/write.js", JSON.stringify(tempWholeArr),{encoding:'utf8'})
   });
 

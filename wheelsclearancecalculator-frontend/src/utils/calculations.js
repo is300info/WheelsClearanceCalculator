@@ -11,12 +11,12 @@ const createData = (width, ratio, diameter) => {
   return obj;
 };
 
-const calculateTireHeight = (width, ratio, diameter) => ((width * ratio) / 25.4) * 2 + diameter;
+const calculateTireHeight = (width, ratio, diameter) => (((width * ratio) / 25.4) * 2 + diameter).toFixed(2);
 
-const calculateSideWallHeight = (width, ratio) => (width * ratio) / 25.4;
+const calculateSideWallHeight = (width, ratio) => ((width * ratio) / 25.4).toFixed(2);
 
 const calculateFrontFenderClearance = (wheelWidth, offset) => {
-    return (wheelWidth*25.4)/2 - offset;
+    return ((wheelWidth*25.4)/2 - offset).toFixed(2);
 }
 
 module.exports = {

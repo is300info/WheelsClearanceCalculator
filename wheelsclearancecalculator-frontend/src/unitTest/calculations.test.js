@@ -8,13 +8,13 @@ const offset = 45;
 
 
 test("calculates the correct tires Height", () => {
-    expect(Number(calculateTireHeight(width, ratio, diameter).toFixed(2))).toBe(24.62)
+    expect(Number(calculateTireHeight(width, ratio, diameter))).toBe(24.62)
 })
 
 test("It's calculates sidewall correct", ()=> {
-    expect(Number(calculateSideWallHeight(width, ratio).toFixed(2))).toBe(3.81)
+    expect(Number(calculateSideWallHeight(width, ratio))).toBe(3.81)
 })
 
 test("Calculates Front Fender Clearance", () => {
-    expect(Number(calculateFrontFenderClearance(wheelWidth,offset).toFixed(2))).toBe(50.25)
+    expect(Number(calculateFrontFenderClearance(wheelWidth,offset))).toBe(50.25)
 })
